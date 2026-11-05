@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <title>Perfil - Wikileitura</title>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <p>WikiLeitura</p>
+        <nav>
+            <ul>
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/explorar.html">Explorar</a></li>
+                <li><a href="../html/qmsomos.html">Quem somos</a></li>
+                <li><a href="../html/novidades.html">Novidades</a></li>
+                <li><a href="../html/contato.html">Fale conosco</a></li>
+                <li>
+                    <details>
+                        <summary>Saiba mais</summary>
+                        <ul>
+                            <li><a href="../html/perfil.html">Meu perfil</a></li>
+                            <li><a href="../html/clubeleitura.html">Clube de leitura</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="acoes">
+            <a href="../html/login.html" class="entrar">Entrar</a>
+            <a href="../html/cadastro.html" class="cadastrar">Cadastre-se</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+     <main>
+        <section class="perfil-topo">
+            <div class="avatar" id="avatar">?</div>
+            <div>
+                <p class="rotulo">Área do leitor</p>
+                <h1 id="nome-usuario">Leitor</h1>
+                <p>Leitor da WikiLeitura</p>
+            </div>
+            <a href="#dados" class="editar">Editar perfil</a>
+        </section>
+
+        <div class="perfil-corpo">
+            <!-- Menu lateral -->
+            <nav class="perfil-menu" aria-label="Menu do perfil">
+                <ul>
+                    <li><a href="#visao-geral">Visão geral</a></li>
+                    <li><a href="#lendo-agora">Lendo agora <span id="badge-lendo">0</span></a></li>
+                    <li><a href="#estante">Minha estante <span id="badge-estante">0</span></a></li>
+                    <li><a href="#historico">Histórico <span id="badge-historico">0</span></a></li>
+                    <li><a href="#dados">Dados pessoais</a></li>
+                </ul>
+                <a href="../php/logout.php" class="sair">Sair</a>
+            </nav>
+
+            <div class="perfil-conteudo">
+                <section id="visao-geral">
+                    <h2><span id="saudacao">Olá</span>, <span id="nome-curto">leitor</span>.</h2>
+                    <p>Acompanhe suas leituras e descubra novas histórias da literatura brasileira.</p>
+                    <ul class="numeros">
+                        <li><strong id="num-lendo">0</strong> Lendo agora</li>
+                        <li><strong id="num-estante">0</strong> Na estante</li>
+                        <li><strong id="num-lidos">0</strong> Livros lidos</li>
+                    </ul>
+                    <a href="../html/explorar.html" class="botao">Explorar livros</a>
+                </section>
+
+                <section id="lendo-agora">
+                    <h2>Lendo agora</h2>
+                    <p>Os livros que você começou e ainda não terminou.</p>
+                    <!-- O JavaScript desenha aqui um <li> para cada livro que vier do banco -->
+                    <ul class="livros-lista" id="lista-lendo"></ul>
+                    <!-- Mensagem de lista vazia: o JavaScript esconde quando houver livros -->
+                    <p class="vazio" id="vazio-lendo">Você ainda não está lendo nenhum livro. <a href="../html/explorar.html">Explore o catálogo</a> e comece uma leitura.</p>
+                </section>
+
+                <section id="estante">
+                    <h2>Minha estante</h2>
+                    <p>Os livros que você guardou para ler depois.</p>
+                    <ul class="estante-grade" id="lista-estante"></ul>
+                    <p class="vazio" id="vazio-estante">Sua estante está vazia. <a href="../html/explorar.html">Explore o catálogo</a> e guarde os livros que quiser ler depois.</p>
+                </section>
+
+                <section id="historico">
+                    <h2>Histórico de leitura</h2>
+                    <p>Tudo o que você já terminou de ler.</p>
+                    <ul class="historico" id="lista-historico"></ul>
+                    <p class="vazio" id="vazio-historico">Você ainda não terminou nenhum livro. Quando terminar, ele aparece aqui.</p>
+                </section>
+
+                <section id="dados">
+                    <h2>Dados pessoais</h2>
+                    <p>As informações que você informou no cadastro.</p>
+                    <div class="dados">
+                        <dl>
+                            <dt>Nome</dt>
+                            <dd id="dado-nome">—</dd>
+                            <dt>E-mail</dt>
+                            <dd id="dado-email">—</dd>
+                            <dt>Nascimento</dt>
+                            <dd id="dado-nascimento">—</dd>
+                            <dt>Estado</dt>
+                            <dd id="dado-estado">—</dd>
+                        </dl>
+                        <a href="#" class="botao">Editar dados</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+     </main>
+
+    <!--Rodapé-->
+    <footer>
+        <section>
+            <p>WikiLeitura</p>
+            <p>Livros nacionais, acesso livre e histórias para todos.</p>
+        </section>
+
+        <nav aria-label="Descubra">
+            <h3>Descubra</h3>
+            <ul>
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/explorar.html">Explorar</a></li>
+                <li><a href="../html/novidades.html">Novidades</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Sua conta">
+            <h3>Sua conta</h3>
+            <ul>
+                <li><a href="../html/perfil.html">Meu perfil</a></li>
+                <li><a href="../html/clubeleitura.html">Clube de leitura</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Projeto">
+            <h3>Projeto</h3>
+            <ul>
+                <li><a href="../html/qmsomos.html">Quem somos</a></li>
+                <li><a href="../html/contato.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <p>© 2026 WikiLeitura</p>
+            <p>Feito para celebrar a literatura nacional.</p>
+            <p><a href="#">Privacidade</a> <a href="#">Termos de uso</a></p>
+        </div>
+    </footer>
+    
+    <script src="../js/cabecalho.js"></script>
+</body>
+</html>
